@@ -19,15 +19,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView szamlalo = findViewById(R.id.szamlalo);
-        Button plusz = findViewById(R.id.plusz);
-        Button minusz = findViewById(R.id.minusz);
+         szamlalo = findViewById(R.id.szamlalo);
+         plusz = findViewById(R.id.plusz);
+         minusz = findViewById(R.id.minusz);
 
         plusz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             int szam = Integer.parseInt(szamlalo.getText().toString());
-            szamlalo.setText(szam+1);
+            szam++;
+            szamlalo.setText(String.valueOf(szam));
 
             if (szam>0){
                 szamlalo.setTextColor(Color.GREEN);
@@ -48,8 +49,22 @@ public class MainActivity extends AppCompatActivity {
         minusz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int a = Integer.parseInt(szamlalo.getText().toString());
-                szamlalo.setText(a-1);
+                int szam = Integer.parseInt(szamlalo.getText().toString());
+                szam--;
+                szamlalo.setText(String.valueOf(szam));
+
+                if (szam>0){
+                    szamlalo.setTextColor(Color.GREEN);
+                }
+
+                else if (szam<0){
+                    szamlalo.setTextColor(Color.RED);
+                }
+
+                else {
+                    szamlalo.setTextColor(Color.BLUE);
+                }
+
             }
 
         });
@@ -57,8 +72,9 @@ public class MainActivity extends AppCompatActivity {
         szamlalo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int a = Integer.parseInt(szamlalo.getText().toString());
+
                 szamlalo.setText("0");
+                szamlalo.setTextColor(Color.BLUE);
             }
 
         });
