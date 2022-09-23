@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 szamlalo.setTextColor(Color.GREEN);
             }
 
-                if (szam<0){
+                else if (szam<0){
                     szamlalo.setTextColor(Color.RED);
                 }
 
-                    if (szam==0){
+                    else if (szam==0){
                         szamlalo.setTextColor(Color.BLUE);
                     }
             }
