@@ -27,11 +27,11 @@
         android:text="-"/>
 
     <Button
+        android:id="@+id/plusz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/szamlalo"
         android:layout_centerInParent="true"
-        android:id="@+id/plusz"
-        android:text="+"/>
+        android:text="+" />
 
 </RelativeLayout>

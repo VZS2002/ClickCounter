@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             int szam = Integer.parseInt(szamlalo.getText().toString());
             szamlalo.setText(szam+1);
 
-            if (szam>=0){
+            if (szam>0){
                 szamlalo.setTextColor(Color.GREEN);
             }
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     szamlalo.setTextColor(Color.RED);
                 }
 
-                    else if (szam==0){
+                    else {
                         szamlalo.setTextColor(Color.BLUE);
                     }
             }
